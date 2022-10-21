@@ -2,10 +2,25 @@
 // maar ook een manier moeten vinden om hetgeen dat je verzamelt ergens te bundelen. Op deze manier zul je ontdekken hoe je omgaat met scope. Pak vooral het hoofdstuk op EdHub over for-loops er nog eens bij!
 // Tip: je mag hier geen ingebouwde object methoden gebruiken, dus daar hoef je niet naar te kijken.
 
-const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
-
+const klas1 = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+const klas2 = [6, 4, 5];
+const klas3 =  [8, 9, 4, 6, 10];
+let cumLaudeGrades
 /* Opdracht  1: Cum Laude */
+console.log(getCumlaudGrades(klas1));
+console.log(getCumlaudGrades(klas2));
+console.log(getCumlaudGrades(klas3));
 
+function getCumlaudGrades(arr) {
+    let counter = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] > 7 ){
+            counter += 1;
+        }
+
+    } return counter;
+    
+}
 /* 1a: Script schrijven  */
 // De administratie moet weten hoeveel studenten er dit blok cum laude zijn afgestudeerd (8 of hoger). Daar moeten namelijk speciale diploma's voor besteld worden.
 // Schrijf de stapjes om dit te kunnen checken eerst uit en vraag jezelf de volgende dingen af:
@@ -31,6 +46,19 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 
 /* Opdracht  2: Gemiddeld cijfer */
+function getAvarages(arr) {
+    let countTotal = 0;
+    let avarages = 0;
+    for (let i = 0; i < arr.length; i++) {
+        countTotal += arr[i];
+    }
+    avarages = countTotal / arr.length;
+    return avarages.toFixed(2);
+}
+
+console.log(getAvarages(klas1));
+console.log(getAvarages(klas2));
+console.log(getAvarages(klas3));
 
 /* 2a: Script schrijven  */
 // De studenten-administratie moet ieder blok opnieuw berekenen wat het gemiddelde eindcijfer is, maar we beginnen met de grades array van hierboven.
@@ -71,7 +99,12 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 9
+function getHighestGrade(arr) {
+    for (let i = 0; i < arr.length; i++) {
 
+    }
+
+}
 
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
